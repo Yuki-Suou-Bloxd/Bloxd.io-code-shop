@@ -1,0 +1,397 @@
+var allItems = [
+    {
+        name: "Diamond Sword",
+        item: "Diamond Sword",
+        price: 50000,
+        rarity: "Drive",
+        minStock: 1,
+        maxStock: 3,
+        chance: 10,
+        enchantText: "[Attack Speed: 3]  [Damage: 2]",
+        enchant: {"Attack Speed":3, "Damage": 2},
+    },
+    {
+        name: "Wood Spear",
+        item: "Wood Spear",
+        price: 9999999999999999999000,
+        rarity: "Secret",
+        minStock: 1,
+        maxStock: 1,
+        chance: 0.00000000001,
+        enchantText: "[MEGA OP]",
+        enchant: {"Attack Speed":1000, "Damage": 1000,"Critical Damage":1000},
+    },
+    {
+        name: "Moonstone Axe",
+        item: "Moonstone Axe",
+        price: 3000000,
+        rarity: "Secret",
+        minStock: 1,
+        maxStock: 2,
+        chance: 1,
+        enchantText: "[Critical Damage: 5]  [Damage: 5]",
+        enchant: {"Critical Damage":5,"Damage":5},
+    },
+    {
+        name: "Diamond Whip",
+        item: "Diamond Whip",
+        price: 3500000,
+        rarity: "Cosmic",
+        minStock: 1,
+        maxStock: 2,
+        chance: 5,
+        enchantText: "[Attack Speed: 2]  [Damage: 2]  [Critical Damage: 1]",
+        enchant: {"Attack Speed":2,"Damage": 2,"Critical Damage":1},
+    },
+      {
+        name: "Iron Sword",
+        item: "Iron Sword",
+        price: 30000000,
+        rarity: "Secret",
+        minStock: 1,
+        maxStock:1,
+        chance: 0.2,
+        enchantText: "?????",
+        enchant: {"Critical Damage":10,"Damage":15,"Attack Speed":3},
+    },
+    {
+        name: "Diamond Mace",
+        item: "Diamond Mace",
+        price: 3500000,
+        rarity: "Cosmic",
+        minStock: 1,
+        maxStock: 2,
+        chance: 5,
+        enchantText: "[Critical Damage: 5]",
+        enchant: {"Critical Damage":5},
+    },
+    {
+        name: "Diamond Spear",
+        item: "Diamond Spear",
+        price:300000,
+        rarity: "Cosmic",
+        minStock: 1,
+        maxStock: 2,
+        chance: 5,
+        enchantText: "[Damage: 5]",
+        enchant: { "Damage": 5},
+    },
+    {
+        name: "Knight Sword",
+        item: "Knight Sword",
+        price: 70000,
+        rarity: "Drive",
+        minStock: 1,
+        maxStock: 3,
+        chance: 10,
+        enchantText: "[Attack Speed: 1]  [Damage: 2]  [Horizontal KnockBack: 1]  [Critical Damage: 1]",
+        enchant: {"Attack Speed":1, "Damage": 2,"Horizontal KnockBack":1,"Critical Damage":1},
+    },
+    {
+        name: "Diamond Bow",
+        item: "Diamond Bow",
+        price: 50000,
+        rarity: "Drive",
+        minStock:1,
+        maxStock: 3,
+        chance: 10,
+        enchantText: "[Quick Charge: 1]  [Arrow Damage: 2]  [Arrow Speed: 2]",
+        enchant: {"Quick Charge":1, "Arrow Damage": 2,"Arrow Speed":2},
+    },
+    {
+        name: "Diamond Helmet",
+        item: "Diamond Helmet",
+        price: 100000,
+        rarity: "Godly",
+        minStock: 1,
+        maxStock: 3,
+        chance: 10,
+        enchantText: "[Protection: 3]  [Health Regen: 1]  [Health: 1]",
+        enchant: {"Protection":3, "Health Regen": 1,"Health":1},
+    },
+    {
+        name: "Diamond Chestplate",
+        item: "Diamond Chestplate",
+        price: 150000,
+        rarity: "Godly",
+        minStock:1,
+        maxStock: 3,
+        chance: 10,
+        enchantText: "[Protection: 3]  [Health Regen: 1]  [Health: 1]",
+        enchant: {"Protection":3, "Health Regen":1,"Health": 1},
+    },
+    {
+        name: "Diamond Gauntlets",
+        item: "Diamond Gauntlets",
+        price: 90000,
+        rarity: "Godly",
+        minStock: 1,
+        maxStock: 3,
+        chance: 10,
+        enchantText: "[Protection: 3]  [Health Regen: 1]  [Health: 1]",
+        enchant: {"Protection":3, "Health Regen":1,"Health": 1},
+    },
+    {
+        name: "Diamond Leggings",
+        item: "Diamond Leggings",
+        price: 135000,
+        rarity: "Godly",
+        minStock:1,
+        maxStock: 3,
+        chance: 10,
+        enchantText: "[Protection: 3]  [Health Regen: 1]  [Health: 1]",
+        enchant: {"Protection":3, "Health Regen":1,"Health": 1},
+    },
+    {
+        name: "Diamond Boots",
+        item: "Diamond Boots",
+        price: 90000,
+        rarity: "Godly",
+        minStock: 1,
+        maxStock: 3,
+        chance: 10,
+        enchantText: "[Protection: 3]  [Health Regen: 1]  [Health: 1]",
+        enchant: {"Protection":3, "Health Regen": 1,"Health":1},
+    },
+    {
+        name: "Golem Pickaxe",
+        item: "Golem Pickaxe",
+        price: 200000,
+        rarity: "Cosmic",
+        minStock: 1,
+        maxStock: 2,
+        chance: 5,
+        enchantText: "[Mining Yield:3]  [Break Speed: 2]",
+        enchant: {"Mining Yield":3, "Break Speed": 2},
+    },
+    {
+        name: "Moonstone Pickaxe",
+        item: "Moonstone Pickaxe",
+        price: 15000,
+        rarity: "Astral",
+        minStock: 1,
+        maxStock: 2,
+        chance: 15,
+        enchantText: "[Break Speed: 3]  [Momentum: 2]",
+        enchant: {"Break Speed":3, "Momentum": 2},
+    },
+    {
+        name: "Diamond Pickaxe",
+        item: "Diamond Pickaxe",
+        price: 20000,
+        rarity: "Astral",
+        minStock: 1,
+        maxStock: 2,
+        chance: 15,
+        enchantText: "[Break Speed: 3]  [Momentum: 2]",
+        enchant: {"Break Speed":3, "Momentum": 2},
+    }
+];
+
+let ItemStock = {};
+
+const TICKS_PER_SECOND = 20;
+const RESTOCK_TIME = 15 * 60 * TICKS_PER_SECOND;
+
+let restockTimer = RESTOCK_TIME;
+
+function random(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function restockItem(){
+
+    ItemStock = {};
+
+    allItems.forEach(seed => {
+
+        const spawnChance = seed.chance || 100;
+
+        if(random(1,100) > spawnChance) return;
+
+        const stockAmount = random(seed.minStock, seed.maxStock);
+
+        ItemStock[seed.name] = {
+            item: seed.item,
+            price: seed.price,
+            rarity: seed.rarity,
+            stock: stockAmount,
+            enchantText: seed.enchantText,
+            enchant: seed.enchant,
+            chance: seed.chance
+        };
+    });
+
+    api.broadcastMessage([
+        {icon:"Compass"},
+        {str:" Shop T5 Restocked!",style:{color:"#00FF99"}}
+    ]);
+}
+
+function getRestockText(){
+
+    const totalSeconds = Math.ceil(restockTimer / 20);
+
+    const minutes = Math.floor(totalSeconds / 60);
+
+    const seconds = totalSeconds % 60;
+
+    return `Restock in ${minutes}m ${seconds}s`;
+}
+
+function showItemStock(playerId){
+
+    let msg = [];
+
+    msg.push({
+        str:"===== ITEM STOCK =====\n",
+        style:{color:"#00FF99"}
+    });
+
+    Object.keys(ItemStock).forEach(seedName => {
+
+        const seed = ItemStock[seedName];
+
+        let color = "#FFFFFF";
+
+        if(seed.rarity === "Mythic") color = "#AAAAAA";
+        if(seed.rarity === "Astral") color = "#FF3131";
+        if(seed.rarity === "Drive") color = "#0066FF";
+        if(seed.rarity === "Godly") color = "#D8B4FE";
+        if(seed.rarity === "Cosmic") color = "#BC13FE";
+        if(seed.rarity === "Secret") color = "#000000";
+
+        msg.push({
+            str:
+                `${seedName}\n` +
+                `Stock: ${seed.stock}\n` +
+                `Price: ${seed.price}$\n` +
+                `Rarity: ${seed.rarity}\n` +
+                `Chance: ${seed.chance}%\n` +
+                `Enchantment: ${seed.enchantText}\n\n`,
+            style:{color}
+        });
+
+    });
+
+    msg.push({
+        str:getRestockText(),
+        style:{color:"#FFFF55"}
+    });
+
+    api.sendMessage(playerId, msg);
+}
+
+function getMoney(playerId){
+
+    enforceStatsIntegrity(playerId);
+
+    const stats = getPlayerStats(playerId);
+
+    return Number(stats.money) || 0;
+}
+
+function setMoney(playerId, amount){
+
+    enforceStatsIntegrity(playerId);
+
+    const stats = getPlayerStats(playerId);
+
+    stats.money = Math.max(0, Number(amount) || 0);
+
+    setPlayerStats(playerId, stats);
+}
+
+function addMoney(playerId, amount){
+
+    enforceStatsIntegrity(playerId);
+
+    const stats = getPlayerStats(playerId);
+
+    stats.money += Number(amount) || 0;
+
+    setPlayerStats(playerId, stats);
+}
+
+function removeMoney(playerId, amount){
+
+    enforceStatsIntegrity(playerId);
+
+    const stats = getPlayerStats(playerId);
+
+    amount = Number(amount) || 0;
+
+    if(stats.money < amount){
+        return false;
+    }
+
+    stats.money -= amount;
+
+    setPlayerStats(playerId, stats);
+
+    return true;
+}
+
+function buyItem(playerId, seedName){
+
+    const seed = ItemStock[seedName];
+
+    if(!seed){
+
+        api.sendMessage(playerId,"This item does not exist",{color:"tomato"});
+        api.playSound(playerId,"bass",1,1);
+
+        return;
+    }
+
+    if(seed.stock <= 0){
+
+        api.sendMessage(playerId,"Out of stock",{color:"tomato"});
+        api.playSound(playerId,"bass",1,1);
+
+        return;
+    }
+
+    const money = getMoney(playerId);
+
+    if(money < seed.price){
+
+        api.sendMessage(playerId,`You need ${seed.price}$`,{color:"tomato"});
+        api.playSound(playerId,"bass",1,1);
+
+        return;
+    }
+
+    removeMoney(playerId, seed.price);
+
+    api.giveItem(playerId,seed.item,1,{
+        customAttributes: {
+            enchantments: seed.enchant,
+            enchantmentTier: "Tier 5"
+        },
+        customDisplayName:seedName,
+        customDescription:
+            `${seed.rarity}\n${seed.enchantText}`
+    });
+
+    seed.stock--;
+
+    api.sendMessage(playerId,`Bought ${seedName}`,{color:"#00FF99"});
+    api.playSound(playerId,"exp_collect",1,1);
+}
+
+tick = () => {
+
+    if(restockTimer > 0){
+
+        restockTimer--;
+
+    } else {
+
+        restockItem();
+
+        restockTimer = RESTOCK_TIME;
+    }
+};
+
+restockItem();
